@@ -25,7 +25,7 @@
             <nav>
                 <div class="rowcontainer">       
                     <div class="container">
-                        <a href="http://yozmatorot.org.il/"><img src="img/logo.png" alt="logo Orot"></a>
+                        <a href="http://yozmatorot.org.il/"><img src="img/meetpal-logo.png" alt="logo Orot"></a>
                     </div><!--end navigation bar-->
                     <a class="nav_link " href="all-products.php">ריכוז עזרים</a> 
                     <!---->
