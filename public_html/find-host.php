@@ -13,6 +13,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
    <main>
        <h1>find host act</h1>
+
+       <a href="categories.php">find</a>
+       <br>
+       <a href="categories.php">host</a>
    </main>
 
 
