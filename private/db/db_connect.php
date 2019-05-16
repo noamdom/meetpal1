@@ -1,9 +1,9 @@
 <?php
   
 define("DB_SERVER", "localhost");
-define("DB_USER", "admintaf_mehilUs");
-define("DB_PASS", "]IotQ!Zh&8b4");
-define("DB_NAME", "admintaf_mehilta");
+define("DB_USER", "meetpalu_meetDBu");
+define("DB_PASS", "SvP9K6wec0vg");
+define("DB_NAME", "meetpalu_meetDB");
 
 //1. create data-base connection
 
