@@ -21,7 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         confirm_result_set($result);
 
         $events = mysqli_fetch_assoc($result);
-        echo $events;
+        print_r($events);
+
+//        echo $events;
         ?>
     </main>
 
