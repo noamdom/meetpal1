@@ -13,6 +13,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     <main>
         <h1>choose act</h1>
+
+        <?php
+        global $db;
+        $sql = "SELECT * FROM `Events` WHERE 1";
+        $result = mysqli_query($db, $sql);
+        confirm_result_set($result);
+
+        $events = mysqli_fetch_assoc($result);
+        echo $events;
+        ?>
     </main>
 
 
