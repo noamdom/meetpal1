@@ -20,29 +20,18 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     </head>
-    <body dir="rtl">
+    <body>
         <header>
             <nav>
                 <div class="rowcontainer">       
                     <div class="container">
                         <a href="http://yozmatorot.org.il/"><img src="img/meetpal-logo.png" alt="logo Orot"></a>
                     </div><!--end navigation bar-->
-                    <a class="nav_link " href="all-products.php">ריכוז עזרים</a> 
+                    <a class="nav_link " href="find-host.php">find-host</a>
                     <!---->
-                    <a class="nav_link" href="all-projects.php">ריכוז מערכים</a>
-                    <a class="nav_link" href="archive.php">ארכיון</a>
-                    <div class="dropdown">
-                        <button class="nav_link dropdown_btn">
-                            עריכה <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content dropdown_link">
-                            <a class="nav_link dropdown_link" href="project.php?act=add&id=0">הוספת מערך</a>
-                            <a class="nav_link dropdown_link" href="product.php?act=add&id=0">הוספת עזר</a>
-                            <a class="nav_link dropdown_link" href="user.php?act=add&id=0">הוספת משתמש</a>
-                            <a class="nav_link dropdown_link" href="update-options.php">עדכון טבלאות</a>
-                        </div>
-                    </div>
-                    <a class="nav_link" href="logout.php">יציאה</a>
+                    <a class="nav_link" href="categories.php">categories</a>
+                    <a class="nav_link" href="choose-act.php">coose-act</a>
+
                 </div>
             </nav>
         </header>
