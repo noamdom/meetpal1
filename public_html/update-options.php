@@ -65,7 +65,7 @@
                     $input = echo_type($t['DATA_TYPE']);
                     $data[$t['COLUMN_NAME']] = array($input, $t['COLUMN_COMMENT']);
                 }
-                $sylbs = general_auery($table);
+                $sylbs = general_query($table);
                 $tblH = true;
 
                 require('general_table.php');
@@ -81,7 +81,7 @@
                     $input = echo_type($t['DATA_TYPE']);
                     $data[$t['COLUMN_NAME']] = array($input, $t['COLUMN_COMMENT']);
                 }
-                $sylbs = general_auery('syllabus');
+                $sylbs = general_query('syllabus');
                 $tblH = true;
                 require('general_table.php');
             ?>
@@ -99,7 +99,7 @@
                     $input = echo_type($t['DATA_TYPE']);
                     $data[$t['COLUMN_NAME']] = array($input, $t['COLUMN_COMMENT']);
                 }
-                $sylbs = general_auery($table);
+                $sylbs = general_query($table);
                 $tblH = true;
 
                 require('general_table.php');
@@ -119,7 +119,7 @@
                     $input = echo_type($t['DATA_TYPE']);
                     $data[$t['COLUMN_NAME']] = array($input, $t['COLUMN_COMMENT']);
                 }
-                $sylbs = general_auery($table);
+                $sylbs = general_query($table);
                 $tblH = true;
 
                require('general_table.php');
@@ -138,7 +138,7 @@
                     $input = echo_type($t['DATA_TYPE']);
                     $data[$t['COLUMN_NAME']] = array($input, $t['COLUMN_COMMENT']);
                 }
-                $sylbs = general_auery($table);
+                $sylbs = general_query($table);
                 $tblH = true;
 
                 require('general_table.php');
@@ -158,7 +158,7 @@
                     $input = echo_type($t['DATA_TYPE']);
                     $data[$t['COLUMN_NAME']] = array($input, $t['COLUMN_COMMENT']);
                 }
-                $sylbs = general_auery($table);
+                $sylbs = general_query($table);
                 $tblH = true;
 
                require('general_table.php');

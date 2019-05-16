@@ -9,7 +9,7 @@
         
     } else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-        $users = general_auery('users');
+        $users = general_query('users');
         ob_start();
         $sbj = 'דו"ח עזרים מאחרים';
         include "freedom_reports.php";

@@ -21,7 +21,7 @@
         }
     } else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
-        $userTypes = general_auery("usersType");
+        $userTypes = general_query("usersType");
 
         $userName = $act === 'edit' ? $user['phaseName'] : '';
         $userLogin = $act === 'edit' ? $user['startAfter'] : '';

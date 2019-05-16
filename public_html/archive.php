@@ -11,8 +11,8 @@
         $search_val = isset($_COOKIE["c_search"]) ? $_COOKIE["c_search"] : '';
         $products = archive_query($col, $order);
 
-        $projects = general_auery('projects');
-        $prodsType = general_auery('prodsType');
+        $projects = general_query('projects');
+        $prodsType = general_query('prodsType');
     } else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($_POST['uploaded']) {
             $prod_id = $_POST['prod_id'];

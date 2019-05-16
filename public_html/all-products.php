@@ -16,7 +16,7 @@
     esc_h($col);
     esc_h($order);
 
-    $phases = general_auery('phases');
+    $phases = general_query('phases');
     $phase_dic = mysqli_fetch_all($phases);
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
@@ -24,10 +24,10 @@
         $user = user_by_id($user_id);
         $permission = user_permission($user['userType']);
         $products = all_prods_query1($col, $order, $permission);
-        $instues = general_auery('institutes');
+        $instues = general_query('institutes');
         //$phases = general_auery('phases');
-        $prodsType = general_auery('prodsType');
-        $sizes = general_auery('sizes');
+        $prodsType = general_query('prodsType');
+        $sizes = general_query('sizes');
 
 
 //                Array();

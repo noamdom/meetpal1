@@ -10,8 +10,8 @@
     unset($_SESSION['msg']);
 
     $projects = all_projects_query($col, $order);
-    $institutes = general_auery('institutes');
-    $syllabus = general_auery('syllabus');
+    $institutes = general_query('institutes');
+    $syllabus = general_query('syllabus');
 ?>
 
 

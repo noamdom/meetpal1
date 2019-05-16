@@ -15,7 +15,7 @@
         } else if ($_POST['add']) {
         }
     } else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-                $phases = general_auery('phases');
+                $phases = general_query('phases');
 
         }
 ?>

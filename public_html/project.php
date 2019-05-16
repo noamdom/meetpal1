@@ -19,16 +19,16 @@
     } else {
         
     }
-    $phases = general_auery('phases');
+    $phases = general_query('phases');
     $phase_dic = mysqli_fetch_all($phases);
 
-    $resp = general_auery('resp');
-    $syllab = general_auery('syllabus');
-    $institutes = general_auery('institutes');
+    $resp = general_query('resp');
+    $syllab = general_query('syllabus');
+    $institutes = general_query('institutes');
 
-    $phases1 = general_auery('phases');
-    $prodsType = general_auery('prodsType');
-    $sizes = general_auery('sizes');
+    $phases1 = general_query('phases');
+    $prodsType = general_query('prodsType');
+    $sizes = general_query('sizes');
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '<pre>';
@@ -374,7 +374,7 @@
 </main>
 <script>
 <?php
-    $phases_name = general_auery('phases');
+    $phases_name = general_query('phases');
     $phase_dic = mysqli_fetch_all($phases_name);
     echo " var phase_json=" . json_encode($phase_dic) . ";    \n\n";
 ?>

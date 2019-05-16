@@ -158,11 +158,11 @@
     }
 
     function sendMail($id, $nextPhase) {
-        $phases = general_auery('phases');
+        $phases = general_query('phases');
         $p = mysqli_fetch_all($phases, MYSQLI_BOTH);
         $phase_name = $p[$nextPhase - 1][1];
         
-        $users = general_auery('users');
+        $users = general_query('users');
         
         
 //        $to = 'ndomovich@gmail.com';

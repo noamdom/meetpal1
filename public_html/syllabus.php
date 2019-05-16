@@ -6,7 +6,7 @@ esc_h($id);
 esc_h($act);
 
 $syllab = general_id_query('syllabus' , $id);
-$institutes = general_auery('institutes');
+$institutes = general_query('institutes');
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

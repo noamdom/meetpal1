@@ -15,12 +15,12 @@
         $product = prods_by_id_query($id);
     } else {
     }
-    $projects = general_auery('projects');
-    $prodsType = general_auery('prodsType');
-    $sizes = general_auery('sizes');
-    $phases = general_auery('phases');
+    $projects = general_query('projects');
+    $prodsType = general_query('prodsType');
+    $sizes = general_query('sizes');
+    $phases = general_query('phases');
     $phase_dic= mysqli_fetch_all($phases);
-    $phases = general_auery('phases');
+    $phases = general_query('phases');
 
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
