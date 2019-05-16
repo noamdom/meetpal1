@@ -16,4 +16,17 @@
     }
 
 
+
+function check_exist_user($table, $username) {
+    global $db;
+    $sql = "SELECT * FROM $table where username ='" . $username . "'";
+    $result = mysqli_query($db, $sql);
+    confirm_result_set($result);
+    return $result;
+}
+
+
+
+
+
     

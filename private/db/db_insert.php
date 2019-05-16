@@ -6,25 +6,19 @@
      * and open the template in the editor.
      */
 
-    function insert_new_project() {
+    function register() {
         global $db;
-        $sql = "INSERT INTO projects ";
-        $sql .= "(`projName`, projUnit , `syllabus`, `institute`, `deadline`, `fromDate`, projWriter , projResp , projNote) ";
+        $sql = "INSERT INTO Users ";
+        $sql .= "(`username`, email , `pword`) ";
         $sql .= "VALUES (";
-        $sql .= "'" . db_escape($db,$_POST['projName']) . "',";
-        $sql .= "'" . $_POST['projUnit'] . "',";
-        $sql .= "'" . $_POST['syllabus'] . "',";
-        $sql .= "'" . $_POST['institute'] . "',";
-        $sql .= "'" . $_POST['deadline'] . "',";
-        $sql .= "'" . $_POST['fromDate'] . "',";
-        $sql .= "'" . db_escape($db,$_POST['projWriter']) . "',";
-        $sql .= "'" . db_escape($db,$_POST['projResp']) . "',";
-        $sql .= "'" . db_escape($db,$_POST['projNote']) . "'";
+        $sql .= "'" . db_escape($db,$_POST['username']) . "',";
+        $sql .= "'" . $_POST['email'] . "',";
+        $sql .= "'" . db_escape($db,$_POST['password1']) . "'";
         $sql .= ") ";
+//        echo $sql . '</br>';
         $result = mysqli_query($db, $sql);
-        $url = 'all-projects.php';
-         $_SESSION['msg'] =  "המערך התווסף בהצלחה";
-        finish_CRUD($result, $url);
+
+
     }
 
     function insert_new_product($target) {

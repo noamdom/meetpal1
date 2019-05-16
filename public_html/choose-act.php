@@ -16,19 +16,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
     <main>
         <h1>choose act</h1>
-        <?php  while ($event = mysqli_fetch_assoc($events)) {  ?>
-        <div class="card">
-            <p>name: <?php echo $event['name']  ?></p>
-            <p>date: <?php echo $event['date']  ?></p>
-            <p>location: <?php echo $event['location']  ?></p>
-            <p>Description: <?php echo $event['description']  ?></p>
-            <button> Join</button>
-        </div>
+        <?php while ($event = mysqli_fetch_assoc($events)) { ?>
+            <div class="card">
+                <div class="info-con">
+                    <p class="card-title"><?php echo $event['name'] ?> - hen ofer</p>
+                    <p class="card-det">date: <?php echo $event['date'] ?></p>
+                    <p class="card-det">location: <?php echo $event['location'] ?></p>
+                    <p class="card-det">Description: <?php echo $event['description'] ?></p>
+                    <br>
+                </div>
+                <button class="join-btn">Join</button>
+            </div>
 
         <?php } ?>
 
     </main>
-
 
 
 <?php

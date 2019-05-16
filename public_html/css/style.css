@@ -65,23 +65,23 @@ nav {
 
 }
 
-nav a  {
-    /*color: white;*/
-    font-weight: bold;
-    margin: 0
-}
+/*nav a  {*/
+    /*!*color: white;*!*/
+    /*font-weight: bold;*/
+    /*margin: 0*/
+/*}*/
 
 
 /*input , select, textArea{
     width : 170px;*/
 /*}*/
 
-hr {
-    margin-top: 10px;
-    width: 96%;
-    margin-right: 2%;
+/*hr {*/
+    /*margin-top: 10px;*/
+    /*width: 96%;*/
+    /*margin-right: 2%;*/
 
-}
+/*}*/
 
 
 
@@ -177,14 +177,32 @@ hr {
     width: 20%;
     background: #F9F7F7;
     border: 3px solid #F2DDDD;
+    border-radius: 5px;
 }
 
+
+.card-det {
+    color: #a1d8d0;
+}
+
+.card-title {
+    color: #b58585;
+    font-size: 1.5rem;
+}
+
+
+.info-con {
+    margin-left: 2%;
+}
 
 
 .join-btn {
     color: white;
     background: #d1b0b0;
-    border: 3px solid #e89f9f;
-    border-radius: 5px;
+    border: 1px solid #e89f9f;
+    border-radius: 7px;
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 10%;
 }
 
