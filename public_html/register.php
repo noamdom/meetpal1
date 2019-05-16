@@ -12,20 +12,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $names = check_exist_user('Users', $username);
     if ($names->num_rows !== 0) {
         $server_msg = "username is already exist";
-    } else if ($_POST['password1'] === $_POST['password2']){
+    } else if ($_POST['password1'] !== $_POST['password2']){
         $server_msg = "please confirm password";
     } else {
         register();
         $server_msg = "good";
     }
-//        $mm =
-//    } else if (strcmp($_POST['password1'], $_POST['password1'])) {
-//        $mm = "password is not confirmed";
-//    } else {
 
-//    }
-
-//
 }
 ?>
 <?php $page_title = 'choose act'; ?>
