@@ -16,6 +16,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
    </main>
 
 
-
 <?php
 include SHARED_PATH . '/shared_footer.php';
