@@ -1,25 +1,6 @@
 <?php
 
-    function update_project($id) {
-        global $db;
-        $sql = "UPDATE projects SET ";
-        $sql .= "projName='" . db_escape($db,$_POST['projName']) . "', ";
-        $sql .= "projUnit='" . $_POST['projUnit'] . "', ";
-        $sql .= "syllabus='" . $_POST['syllabus'] . "', ";
-        $sql .= "institute='" . $_POST['institute'] . "', ";
-        $sql .= "fromDate='" . $_POST['fromDate'] . "', ";
-        $sql .= "deadline='" . $_POST['deadline'] . "', ";
-        $sql .= "projWriter='" . db_escape($db,$_POST['projWriter']) . "', ";
-        $sql .= "projResp='" . db_escape($db,$_POST['projResp']) . "', ";
-        $sql .= "projNote='" . db_escape($db,$_POST['projNote']) . "' ";
-        $sql .= "WHERE projects.projId='" . db_escape($db, $id) . "' ";
-        $sql .= "LIMIT 1";
-        echo "sql: " . $sql;
-        $result = mysqli_query($db, $sql);
-        $url = 'project.php?act=edit&id=' . $id;
-        $_SESSION['msg'] = "השינויים נשמרו בהצלחה";
-        finish_CRUD($result, $url);
-    }
+
 
     function update_product($id) {
         global $db;

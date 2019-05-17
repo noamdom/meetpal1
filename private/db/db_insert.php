@@ -17,9 +17,64 @@
         $sql .= ") ";
 //        echo $sql . '</br>';
         $result = mysqli_query($db, $sql);
-
-
+        return $result;
     }
+
+
+function join_event($event_id, $user_id) {
+    global $db;
+    $sql = "INSERT into participants_groups ";
+    $sql .= "( user_id, event_id ) ";
+    $sql .= "VALUES (";
+    $sql .= "'" . $user_id . "',";
+    $sql .= "'" . $event_id . "'";
+    $sql .= ") ";
+        echo $sql . '</br>';
+    $result = mysqli_query($db, $sql);
+
+    finish_CRUD($result,"categories.php");
+}
+
+
+
+
+function new_event($hostID) {
+    global $db;
+    $sql = "INSERT into Events ";
+    $sql .= "( name, date , category , location , description , hostID ) ";
+    $sql .= "VALUES (";
+    $sql .= "'" . $_POST['name'] . "',";
+    $sql .= "'" . $_POST['date'] . "',";
+    $sql .= "'" . $_POST['category'] . "',";
+    $sql .= "'" . $_POST['location'] . "',";
+    $sql .= "'" . $_POST['description'] . "',";
+    $sql .= "'" . $hostID . "'";
+    $sql .= ") ";
+    echo $sql . '</br>';
+    $result = mysqli_query($db, $sql);
+
+
+    $sql = "SELECT max(id) FROM Events ";
+    echo $sql;
+    $result = mysqli_query($db, $sql);
+    $result1 = mysqli_fetch_array($result);
+
+    $event_id = $result1[0];
+
+    $sql = "INSERT into provider_groups ";
+    $sql .= "( user_id, event_id ) ";
+    $sql .= "VALUES (";
+    $sql .= "'" . $hostID . "',";
+    $sql .= "'" . $event_id . "'";
+    $sql .= ") ";
+    echo $sql . '</br>';
+    $result = mysqli_query($db, $sql);
+    finish_CRUD($result,"categories.php");
+
+}
+
+
+
 
     function insert_new_product($target) {
         global $db;
@@ -48,14 +103,14 @@
         $_SESSION['msg'] = "העזר התווסף בהצלחה";
         finish_CRUD($result, $target);
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
 
     function insert_phase($phaseName, $startAfter, $during, $toEnd, $description, $phaseNum, $active) {
         global $db;
@@ -109,8 +164,8 @@
             exit;
         }
     }
-    
-    
+
+
     function insert_new_act_record($act_id, $prod) {
         global $db;
          $sql = "INSERT INTO acts_records ";
@@ -125,5 +180,5 @@
 //        echo "<br><pre> sql: " . $sql . "</pre><br>";
 
         $result = mysqli_query($db, $sql);
-        
+
     }

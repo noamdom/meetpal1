@@ -15,6 +15,15 @@
         return $result;
     }
 
+function events_by_category($category) {
+    global $db;
+    $sql = "SELECT * FROM Events where category = '" . $category . "'";
+//    echo $sql;
+    $result = mysqli_query($db, $sql);
+    confirm_result_set($result);
+    return $result;
+}
+
 
 
 function check_exist_user($table, $username) {
