@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     }
 
     .act-name{
-        font-size:90%;
+        font-size: 1.3rem;
         margin-left: 15%;
         color: #B58585;
         font-family: 'Rockwell';
@@ -89,13 +89,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         color:  #A1D8D0;
         font-family: 'Rockwell';
         margin-left: 5%;
-        font-size: 80%;
+        font-size: 1rem;
     }
 
     .act-info-change{
         color:  #A1D8D0;
         font-family: 'Rockwell';
-        font-size: 70%;
+        font-size: 1rem;
         margin-left: 5%;
         margin-right: 5%;
     }
@@ -165,25 +165,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 
     <main>
-        <h1>choose act</h1>
-<!--        <div class="grid-container">-->
-<!---->
-<!--        --><?php //while ($event = mysqli_fetch_assoc($events)) { ?>
-<!---->
-<!--            <div class="card grid-item">-->
-<!--                <div class="info-con">-->
-<!--                    <input type="hidden" value="--><?php //echo $event['id'] ?><!--">-->
-<!--                    <p class="card-title">--><?php //echo $event['name'] ?><!-- - hen ofer</p>-->
-<!--                    <p class="card-det">date: --><?php //echo $event['date'] ?><!--</p>-->
-<!--                    <p class="card-det">location: --><?php //echo $event['location'] ?><!--</p>-->
-<!--                    <p class="card-det">Description: --><?php //echo $event['description'] ?><!--</p>-->
-<!--                    <br>-->
-<!--                </div>-->
-<!--                <button class="join-btn" onclick="submit_id_event(--><?php //echo $event['id'] ?>
-<!--        //)">Join</button>-->
-<!--//            </div>-->
-      <?php //} ?>
-<!--        </div>-->
+        <label class="Activity-lbl" >Activities</label>
         <div class="grid-container">
 
 
@@ -193,7 +175,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 <div class="flip-card-inner">
 
                     <div class="flip-card-front">
-                        <label class="act-name"><?php echo $event['name']?> - Michal Sade</label>
+                        <label class="act-name"><?php echo $event['name']?> </label>
 
                         <div class="act-info">
                             <label class="info-details">Address:</label>
@@ -205,19 +187,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                             <label class="act-info-change"><?php echo $event['date']?></label>
                         </div>
 
-                        <div class="act-info">
-                            <label class="info-details">Time:</label>
-                            <label class="act-info-change">to change</label>
-                        </div>
+<!--                        <div class="act-info">-->
+<!--                            <label class="info-details">Time:</label>-->
+<!--                            <label class="act-info-change">to change</label>-->
+<!--                        </div>-->
 
                         <div class="act-info">
                             <label class="info-details">Host:</label>
-                            <label class="act-info-change">to change </label>
+                            <label class="act-info-change"><?php echo $event['username'] ?> </label>
                         </div>
                     </div>
 
                     <div class="flip-card-back">
-                        <label class="act-name">Acroyoga - Michal Sade</label>
+                        <label class="act-name"><?php echo $event['name']?></label>
 
                         <div class="act-info">
                             <label class="info-details">Description:</label>
@@ -246,10 +228,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     </main>
 
 
+
+
+
 <script>
     function submit_id_event(event_id) {
         var sumbit = document.getElementById("event_id");
         sumbit.value = event_id;
+        alert("you joined to an event");
         document.getElementsByTagName('form')[0].submit()
 
     }

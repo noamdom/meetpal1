@@ -4,7 +4,6 @@ require_once('../private/init.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $events = general_query("Events");
-//    $events = mysqli_fetch_assoc($res);
 
 
 } else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -125,13 +124,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                         <label class="register-title">Confirm Password:</label>
                         <input name='password2' class="input-bar" type="password" pattern="[A-Za-z0-9]+"></input>
                     </div>
-                    <button class="register-btn" id="register-btn">sign up</button>
+                    <button class="register-btn" onclick="isregister()" id="register-btn">sign up</button>
                 </div>
             </div>
         </form>
 
 
     </main>
+
+    <script>
+        function isregister() {
+            alert("user registered successfully");
+        }
+    </script>
 
 
 <?php

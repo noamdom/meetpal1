@@ -52,6 +52,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         margin-right: auto;
     }
 
+    #host {
+        margin-left: 30%;
+      }
+
 
 
 
@@ -85,8 +89,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
                </div>
 
-               <div class="gallery">
-                   <a href="categories.php">
+               <div id="host" class="gallery">
+                   <a href="add-event.php">
                        <h1>Add Activity</h1>
                    </a>
                </div>

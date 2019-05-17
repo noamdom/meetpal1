@@ -7,9 +7,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 
 } else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    print_r($_POST);
+
     new_event($_SESSION['user_id']);
     echo '<br>';
-    print_r($_POST);
 
 
 
@@ -19,95 +20,79 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 <?php include SHARED_PATH . '/shared_header.php' ?>
 
     <style>
-        .register-back {
+
+        .add-activity-back {
             background: #f9f7f7;
             border: 2px solid #ddcccc;
-            height: 400px;
+            height:450px;
             width: 30%;
             margin-left: 35%;
             margin-top: 30px;
             margin-bottom: 30px;
-            border-radius: 20px;
+            border-radius: 5px;
         }
 
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            height: 6%;
-            width: 100%;
-            background: #f9f7f7;
-            color: white;
-            text-align: center;
-            border: 4px solid #EDE4E4;
-        }
+        .add-activity-lbl {
 
-        .register-lbl {
             font-size: 50px;
-            color: #A1D8D0;
-            margin-left: 100px;
+            color:  #A1D8D0;
+            margin-left: 60px;
             font-family: 'Rockwell';
         }
 
-        .title-register {
-            margin-top: 25px;
-            margin-bottom: 25px;
-        }
-
-        .info {
-            margin-top: 50px;
-        }
-
-        .insert-register {
+        .insert-activity {
             margin-top: 20px;
             margin-bottom: 20px;
         }
 
-        .register-title {
+        .activity-title {
             margin-left: 40px;
             margin-right: 20px;
-            font-size: 15px;
+            font-size: 20px;
             color: #B58585;
             font-family: 'Rockwell';
         }
 
-        .input-bar {
-            background-color: #EDE8E8;
+        .info {
+            margin-top:50px;
+        }
+
+        .input-bar{
+            background-color:  #EDE8E8;
             color: #B58585;
         }
 
-        .register-btn {
-            margin-top: 50px;
-            background-color: #B58585;
+        .add-btn {
+            margin-top:2%;
+            background-color:  #B58585;
             color: #EDE8E8;
-            width: 200px;
+            width:200px;
             height: 30px;
             font-family: 'Rockwell';
             margin-left: 90px;
-            border: 1px solid #ddcccc;
+            border: 1px solid  white;
         }
 
+        .add-btn:hover {
+            opacity: 0.7;
+        }
     </style>
 
     <main>
-        <p>massage: <?php echo $server_msg ?></p>
-
         <form action="add-event.php" method="post">
-            <div class="register-back">
-                <div class="title-register">
-                    <label class="register-lbl">Add Activity</label>
-                </div>
+            <div class="add-activity-back">
 
-
+                <label class="add-activity-lbl" >Add Activity</label>
 
                 <div class="info">
-<!--                    <div class="insert-register">-->
-
-                    <div class="insert-register">
-                        <input name='name' class="input-bar" type="text" "></input>
+                    <div class="insert-activity">
+                        <label class="activity-title">Name:</label>
+                        <input name="name" class="input-bar" type="text"> </input>
                     </div>
 
-                        <select  name = "category" class="insert-register" >
+                    <div class="insert-activity">
+                        <label class="activity-title" >Which activity:</label>
+                        <select  name = "category" class="input-bar" >
                             <option value="" disabled selected hidden>choose category..</option>
                             <option value="arts">arts</option>
                             <option value="baking">baking</option>
@@ -119,33 +104,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                             <option value="run">run</option>
                             <option value="yoga">yoga</option>
                         </select>
-
-
-<!--                    </div>-->
-
-
-                    <div class="insert-register">
-<!--                        <label class="register-title">Email:</label>-->
-                        <input name="location" class="input-bar" type="text" placeholder="location"> </input>
                     </div>
 
-                    <div class="insert-register">
+                    <div class="insert-activity">
+                        <label class="activity-title">Location:</label>
+                        <input name="location" class="input-bar" type="text"> </input>
+                    </div>
+
+                    <div class="insert-activity">
+                        <label class="activity-title">Date:</label>
                         <input name='date' class="input-bar" type="datetime-local" pattern="[A-Za-z0-9]+"></input>
                     </div>
 
 
-
-                    <div class="insert-register">
-<!--                        <label class="register-title">Confirm Password:</label>-->
-                        <textarea name='description' class="input-bar"  placeholder="description"></textarea>
+                    <div class="insert-activity">
+                        <label class="activity-title">Description:</label>
+                        <textarea name='description' class="input-bar" ></textarea>
                     </div>
-                    <button class="register-btn" id="register-btn">sign up</button>
+
+                    <button onclick="event_added()" class="add-btn">Add Activity</button>
                 </div>
             </div>
+
         </form>
 
 
     </main>
+<script>
+    function event_added() {
+        alert("event added successfully");
+    }
+
+</script>
 
 
 <?php

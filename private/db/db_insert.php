@@ -17,7 +17,7 @@
         $sql .= ") ";
 //        echo $sql . '</br>';
         $result = mysqli_query($db, $sql);
-        return $result;
+        finish_CRUD($result,"find-host.php");
     }
 
 
@@ -32,7 +32,7 @@ function join_event($event_id, $user_id) {
         echo $sql . '</br>';
     $result = mysqli_query($db, $sql);
 
-    finish_CRUD($result,"categories.php");
+    finish_CRUD($result,"profile.php");
 }
 
 
@@ -44,13 +44,14 @@ function new_event($hostID) {
     $sql .= "( name, date , category , location , description , hostID ) ";
     $sql .= "VALUES (";
     $sql .= "'" . $_POST['name'] . "',";
-    $sql .= "'" . $_POST['date'] . "',";
+    $sql .= "'" . $_POST['date']  . " ',";
     $sql .= "'" . $_POST['category'] . "',";
     $sql .= "'" . $_POST['location'] . "',";
     $sql .= "'" . $_POST['description'] . "',";
     $sql .= "'" . $hostID . "'";
     $sql .= ") ";
     echo $sql . '</br>';
+
     $result = mysqli_query($db, $sql);
 
 
@@ -69,7 +70,7 @@ function new_event($hostID) {
     $sql .= ") ";
     echo $sql . '</br>';
     $result = mysqli_query($db, $sql);
-    finish_CRUD($result,"categories.php");
+    finish_CRUD($result,"profile.php");
 
 }
 

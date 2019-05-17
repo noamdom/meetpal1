@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     }
     h1
     {
-        margin-top: 100px;
+        margin-top: 50px;
         color: #A1D8D0;
         text-align: center;
         font-family: "Rockwell"
@@ -42,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     {
         margin-left: 33%;
         margin-bottom: 100px;
+
     }
 
     .pic{
@@ -203,6 +204,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
     </main>
 

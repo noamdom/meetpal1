@@ -17,7 +17,8 @@
 
 function events_by_category($category) {
     global $db;
-    $sql = "SELECT * FROM Events where category = '" . $category . "'";
+//    $sql = "SELECT * FROM Events where category = '" . $category . "'";
+    $sql = "SELECT * FROM Events LEFT JOIN Users on Events.hostID = Users.id where category = '" . $category . "'";
 //    echo $sql;
     $result = mysqli_query($db, $sql);
     confirm_result_set($result);
