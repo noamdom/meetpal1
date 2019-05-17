@@ -166,20 +166,3 @@ function new_event($hostID) {
         }
     }
 
-
-    function insert_new_act_record($act_id, $prod) {
-        global $db;
-         $sql = "INSERT INTO acts_records ";
-        $sql .= "(`userId`, `actId`, `act_datetime`, `product`, `project`) ";
-        $sql .= "VALUES (";
-        $sql .= "'" . $_SESSION['user_id'] . "',";
-        $sql .= "'" . $act_id . "',";
-        $sql .= "'" . date('Y-m-d H:i:s') . "',";
-        $sql .= "'" . $prod . "',";
-        $sql .= "'" . db_escape('') . "'";
-        $sql .= ")";
-//        echo "<br><pre> sql: " . $sql . "</pre><br>";
-
-        $result = mysqli_query($db, $sql);
-
-    }

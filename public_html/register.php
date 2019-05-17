@@ -95,7 +95,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     </style>
 
     <main>
-        <p>massage: <?php echo $server_msg ?></p>
 
         <form action="register.php" method="post">
             <div class="register-back">

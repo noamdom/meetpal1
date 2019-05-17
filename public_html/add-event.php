@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
                     <div class="insert-activity">
                         <label class="activity-title">Date:</label>
-                        <input name='date' class="input-bar" type="datetime-local" pattern="[A-Za-z0-9]+"></input>
+                        <input name='date' class="input-bar" type="date" pattern="[A-Za-z0-9]+"></input>
                     </div>
 
 

@@ -9,6 +9,8 @@
      $msg = isset($_SESSION['msg']) ? $_SESSION['msg'] : '';
     unset($_SESSION['msg']);
 
+    $server_msg ='';
+
 
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -17,8 +19,8 @@
         $userLogin = isset($_POST['userLogin']) ? $_POST['userLogin'] : '';
         $password = isset($_POST['password']) ? $_POST['password'] : '';
 
-        echo 'login: ' . $userLogin . '<br>';
-        echo 'password: ' . $password . '<br>';
+//        echo 'login: ' . $userLogin . '<br>';
+//        echo 'password: ' . $password . '<br>';
 //
 //        echo 's_pass:' . password_hash($password, PASSWORD_BCRYPT) . '<br>';
 
@@ -30,6 +32,7 @@
                 $server_msg = "connect";
                 log_in($user);
                 header("location: find-host.php");
+
             } else {
                 $server_msg = "wrong pass";
             }
@@ -39,20 +42,6 @@
         }
 
 
-//        if ($user) {
-////            echo 'db_pass ' . $user['userPass'] . '<br>';
-//            if (password_verify($password, $user['userPass'])) {
-////            if ($password == $user['userPass']) {
-//                log_in($user);
-//                header("location: all-products.php");
-//                exit;
-//            } else {
-//                $_SESSION['msg'] =  "שגיאה בשם משתמש או סיסמה";
-//                header("location: login.php");
-//                exit;
-//            }
-        } else {
-            $server_msg = "wrong input";
     }
 ?>
 
@@ -150,7 +139,7 @@
     }
 
 </style>
-    <p>massage: <?php echo $server_msg ?></p>
+
 
     <form action="login.php" method="post">
         <div class="login-back">
@@ -174,6 +163,10 @@
                     <label class="create-user-title">don't have an account yet?
                         <label class="create-account"><a class="link-sign-up" href="register.php" ><strong>sign up here!</strong></a></label>
                     </label>
+                </div>
+
+                <div>
+                    <label class="create-user-title " style="color: #EF6F78"><?php echo $server_msg ?></p> </label>
                 </div>
 
                 <button class="login-btn" id="sign-in-btn">sign in</button>

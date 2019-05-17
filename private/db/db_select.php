@@ -54,6 +54,7 @@ function my_participating_events($id) {
     $sql = "SELECT name from Events WHERE id in ( SELECT event_id from participants_groups WHERE user_id = " . $id ." )";
     $result = mysqli_query($db, $sql);
 //    print_r($result);
+//    exit;
     return $result;
 }
 

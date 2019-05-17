@@ -103,9 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             <div class="column-box">
                 <label class="box-lbl" >Participate Activity</label>
                 <ul>
-                    <?php while ($p = mysqli_fetch_array($participating)) {
-                        echo "<li class='activity'>" . $p[0] . "</li>";
-                    } ?>
+                        <li class='activity'>dinner</li>
                 </ul>
             </div>
 
