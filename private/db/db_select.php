@@ -48,6 +48,25 @@ function user_by_username($username) {
     return $userDet;
 }
 
+function my_participating_events($id) {
+    global $db;
+    $sql = "SELECT name from Events WHERE id in ( SELECT event_id from participants_groups WHERE user_id = " . $id ." )";
+    $result = mysqli_query($db, $sql);
+//    print_r($result);
+    return $result;
+}
+
+
+
+function my_provider_events($id) {
+    global $db;
+    $sql = "SELECT name from Events WHERE id in ( SELECT event_id from provider_groups WHERE user_id = " . $id ." )";
+//    echo $sql;
+    $result = mysqli_query($db, $sql);
+//    print_r($result);
+    return $result;
+}
+
 
 
 
